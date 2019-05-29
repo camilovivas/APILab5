@@ -1,6 +1,6 @@
 package model;
 
-public class MedicinesManufacturing extends ManufacturingCompany{
+public class MedicinesManufacturing extends ManufacturingCompany implements ConsumptionXTree{
 	// CONSTANTES
 	public static final int VALID = 1;
 	public static final int NOT_RENEWED = 2;
@@ -23,8 +23,7 @@ public class MedicinesManufacturing extends ManufacturingCompany{
 		
 	}
 	// METHODS
-	public waterXtree(){
+	// public waterXtree(){
 		
 		// de donde el agua?
-	}
 }

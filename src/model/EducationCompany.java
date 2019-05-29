@@ -1,6 +1,6 @@
 package model;
 
-public class EducationCompany extends ServicesCompany{
+public class EducationCompany extends ServicesCompany implements Procultura{
 	public final static char UNIVERSITY = 'u';
 	public final static char HIGH_SCHOOL = 'h';
 	
@@ -14,7 +14,7 @@ public class EducationCompany extends ServicesCompany{
 	private int studentsActive;
 	
 	public EducationCompany(){
-		
+		super();
 		
 	}
 	
@@ -23,8 +23,8 @@ public class EducationCompany extends ServicesCompany{
 	*
 	*/
 	public String percentProcultura(){
-		double procultura = 20-  //porcentaje de studentsStratum1and2 
-		
+		double procultura = 20;//porcentaje de studentsStratum1and2 
+		String msj;
 		if(procultura < 0){
 			msj= "la empresa queda eximida de cobrar el procultura";
 		}

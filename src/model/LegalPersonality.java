@@ -7,10 +7,12 @@ public class LegalPersonality{
 	private String phone;
 	private int employees;
 	private double assets;
-	private date;
+	private int day;
+	private int month;
+	private int year;
 	private String nameLR;
 	
-	public LegalPersonality(String nit, String address, String phone, int employees, double assets, String nameLR){
+	public LegalPersonality(String nit, String address, String phone, int employees, double assets,  int day, int month, int year, String nameLR){
 		
 		this.nit = nit;
 		this.address = address;
@@ -19,6 +21,11 @@ public class LegalPersonality{
 		this.assets = assets;
 		this.nameLR = nameLR;
 		
+	}
+	public String date(){
+		String msj = day+"/"+month+"/"+year;
+		
+		return msj;
 	}
 	
 	

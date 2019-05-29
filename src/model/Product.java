@@ -16,7 +16,7 @@ public class Product{
 		
 	}
 	
-	public String gatName(){
+	public String getName(){
 		return name;
 	}
 	public void setName(String name){
