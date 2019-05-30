@@ -14,8 +14,8 @@ public class MedicinesManufacturing extends ManufacturingCompany implements Cons
 	private String expiring;
 	private char modality;
 	
-	public MedicinesManufacturing(String registrySanitarian, int statusRegistry, String expiring, char modality){
-		super();
+	public MedicinesManufacturing(String nit, String address, String phone, int employees, double assets, int day, int month, int year, String nameLR, int type, String nameRegistry, String registrySanitarian, int statusRegistry, String expiring, char modality){
+		super(nit, address, phone, employees, assets, day, month, year, nameLR, type, nameRegistry);
 		this.registrySanitarian = registrySanitarian;
 		this.statusRegistry = statusRegistry;
 		this.expiring = expiring;

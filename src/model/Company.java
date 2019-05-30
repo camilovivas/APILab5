@@ -17,8 +17,8 @@ public class Company extends LegalPersonality{
 	private int type;
 
 	
-	public Company(int type, String nameRegistry){
-		super();
+	public Company(String nit, String address, String phone, int employees, double assets, int day, int month, int year, String nameLR, int type, String nameRegistry){
+		super(nit, address, phone, employees, assets, day, month, year, nameLR);
 		this.type = type;
 		this.nameRegistry = nameRegistry;
 		

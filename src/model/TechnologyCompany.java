@@ -12,8 +12,8 @@ public class TechnologyCompany extends ServicesCompany implements ConsumptionXTr
 	// ATRIBUTOS
 	private ArrayList<Character> services;
 	
-	public TechnologyCompany(){
-		super();
+	public TechnologyCompany(String nit, String address, String phone, int employees, double assets, int day, int month, int year, String nameLR, int type, String nameRegistry){
+		super(nit, address, phone, employees, assets, day, month, year, nameLR, type, nameRegistry);
 		services = new ArrayList<Character>();
 	}
 	
