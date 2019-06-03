@@ -10,4 +10,11 @@ public class ManufacturingCompany extends Company{
 		products =  new ArrayList<Product>();
 	}
 	
+	public  ArrayList<Product> getProducts(){
+		return products;
+	}
+	
+	public void addProduct(Product p){
+		products.add(p);
+	}
 }

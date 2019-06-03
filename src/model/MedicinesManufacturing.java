@@ -23,7 +23,26 @@ public class MedicinesManufacturing extends ManufacturingCompany implements Cons
 		
 	}
 	// METHODS
-	// public waterXtree(){
-		
-		// de donde el agua?
+	public int waterXtree(){
+		double ltrs = 0;
+		int tree = 0;
+		for(int i = 0; i<getProducts().size(); i++){
+			if(getProducts().get(i).getWater()>0){
+				ltrs += getProducts().get(i).getWater();
+			}
+		}
+		if(ltrs >1 && ltrs<140){
+			tree = 6;
+		}
+		else if(ltrs>141 && ltrs< 800){
+			tree = 25;
+		}
+		else{
+			tree = 200;
+		}
+		return tree;
+	}
+	public int energyXtree(){
+		return 0;
+	}
 }
