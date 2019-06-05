@@ -16,4 +16,24 @@ public class PublicServices extends ServicesCompany implements Procultura{
 		this.subscribers = subscribers;
 		this.subscribersStratum1and2 = subscribersStratum1and2;
 	}
+	
+	public String percentProcultura2(){
+		
+		double procultura = 40-(subscribers/subscribersStratum1and2)*100;
+		String msj;
+		if(procultura < 0){
+			msj= "la empresa queda eximida de cobrar el procultura";
+		}
+		else{
+			msj = "el valor a pagar de procultura es:"+procultura;
+		}
+
+		return msj;
+	}
+	
+	public String percentProcultura(){
+		return " ";
+	}
+
+	
 }

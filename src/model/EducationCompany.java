@@ -23,7 +23,8 @@ public class EducationCompany extends ServicesCompany implements Procultura{
 	*
 	*/
 	public String percentProcultura(){
-		double procultura = 20;//porcentaje de studentsStratum1and2
+		
+		double procultura = 20-(studentsStratum1and2/studentsActive)*100;
 		String msj;
 		if(procultura < 0){
 			msj= "la empresa queda eximida de cobrar el procultura";
@@ -33,5 +34,9 @@ public class EducationCompany extends ServicesCompany implements Procultura{
 		}
 
 		return msj;
+	}
+	
+	public String percentProcultura2(){
+		return " ";
 	}
 }

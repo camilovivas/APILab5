@@ -2,13 +2,21 @@ package model;
 import java.util.*;
 
 public class Holding extends LegalPersonality{
-	public static final int FILAS = 7;
 	public static final int COLUMNAS = 20;
 	private Cubicle [][] edifice;
+	private int filas;
 	
-	public Holding(String nit, String address, String phone, int employees, double assets, int day, int month, int year, String nameLR){
+	public Holding(String nit, String address, String phone, int employees, double assets, int day, int month, int year, String nameLR, int filas){
 		super(nit, address, phone, employees, assets, day, month, year, nameLR);
-		edifice = new Cubicle [FILAS][COLUMNAS];
+		this.filas = filas;
+		edifice = new Cubicle [filas][COLUMNAS];
+	}
+	
+	public int getFilas(){
+		return filas;
+	}
+	public void setFilas(int filas){
+		this.filas = filas;
 	}
 	
 	public String spiral(String position){
@@ -22,13 +30,14 @@ public class Holding extends LegalPersonality{
 		int q = edifice.length-sumador;
 		int r = edifice[q].length-sumador;
 		int s = sumador;
+		int contador = 0;
 		
 		
-		while(edifice == FILAS*COLUMNAS){
+		while(contador == filas*COLUMNAS){
 			
 			// movimiento columnas abajo 
 			for(int i = 0; i<edifice.length-sumador; i++){
-				// edifice[i][avanceColumnas]
+				contador++;
 				if(edifice[i][avanceColumnas].getPosition().equals(position)){
 					msj+=edifice[i][avanceColumnas].getEmail();
 				}
@@ -38,6 +47,7 @@ public class Holding extends LegalPersonality{
 			// movimiento fila adelante
 			if(a == true){
 				for(int j = q; j<edifice[q].length-sumador; j++){
+					contador++;
 					if(edifice[q][j].getPosition().equals(position)){
 						msj+=edifice[q][j].getEmail();
 					}
@@ -48,6 +58,7 @@ public class Holding extends LegalPersonality{
 			// movimiento colummnas arriba
 			if(b==true){
 				for(int f = r; f>sumador; f--){
+					contador++;
 					if(edifice[f][r].getPosition().equals(position)){
 						msj+=edifice[r][f].getEmail();
 					}
@@ -57,6 +68,7 @@ public class Holding extends LegalPersonality{
 			// movimiento fila atras
 			if(c== true){
 				for(int k = edifice[sumador].length-1; k<restador; k--){
+					contador++;
 					if(edifice[s][k].getPosition().equals(position)){
 						msj+=edifice[s][k].getEmail();
 					}
@@ -74,19 +86,19 @@ public class Holding extends LegalPersonality{
 	}
 	
 	public String SearchExtensionL(String name){
-		String ext;
+		String ext = "";
 		boolean found = false;
 		int a = edifice[0].length;
 		for(int i = 0; i<edifice.length && !found; i++){
 			if(edifice[i][0].getNameEmployee().equals(name)){
-				ext = edifice[i][0].getExtension();
+				ext += edifice[i][0].getExtension();
 				found = true;
 			}
 			
 		}
 		for(int j = a; j<edifice[a].length && !found; j++){//como hacer que pase de un for a otro
 			if(edifice[a][j].getNameEmployee().equals(name)){
-				ext = edifice[a][j].getExtension();
+				ext += edifice[a][j].getExtension();
 				found = true;
 			}
 			
@@ -95,14 +107,14 @@ public class Holding extends LegalPersonality{
 	}
 	
 	public String SearchExtensioZ(String name){
-		String ext;
+		String ext= "";
 		boolean found = false;
 		int  r = edifice.length;
 		int b = edifice[0].length;
 		
 		for(int i = 0; i<edifice[0].length && !found; i++){
 			if(edifice[0][i].getNameEmployee().equals(name)){
-				ext = edifice[0][i].getExtension();
+				ext += edifice[0][i].getExtension();
 				found = true;
 			}
 			
@@ -113,7 +125,7 @@ public class Holding extends LegalPersonality{
 			for(int k = b; k>0 ;k--){
 					
 				if(edifice[j][k].getNameEmployee().equals(name)){
-					ext = edifice[j][k].getExtension();
+					ext += edifice[j][k].getExtension();
 					found = true;
 				}
 			}
@@ -121,7 +133,7 @@ public class Holding extends LegalPersonality{
 		
 		for(int f = 0; f<edifice[r].length; f++){
 			if(edifice[r][f].getNameEmployee().equals(name)){
-				ext = edifice[r][f].getExtension();
+				ext += edifice[r][f].getExtension();
 				found = true;
 			}
 			
@@ -130,14 +142,14 @@ public class Holding extends LegalPersonality{
 	}
 	
 	public String SearchExtensionX(String name){
-		String ext;
+		String ext = "";
 		int b = edifice[0].length;
 		int c =  edifice.length;
 		// diagonal de paa atras
 		for(int i = 0; i<c++; i++){
 			for(int j = b; j<0; j--){
 				if(edifice[i][j].getNameEmployee().equals(name)){
-					ext = edifice[i][j].getExtension();
+					ext += edifice[i][j].getExtension();
 				}
 			}
 		}
@@ -145,7 +157,7 @@ public class Holding extends LegalPersonality{
 		for(int k = 0; k<c++; k++){
 			for(int h = 0; h<b; h++){
 				if(edifice[k][h].getNameEmployee().equals(name)){
-					ext = edifice[k][h].getExtension();
+					ext += edifice[k][h].getExtension();
 				}
 			}
 		}
@@ -153,38 +165,39 @@ public class Holding extends LegalPersonality{
 	}
 	// con el encontrado diferente ya no entra a los demas ciclos?
 	public String SearchExtensionO(String name){
-		String ext;
+		String ext = "";
 		int e =edifice[0].length;
 		int d = edifice.length;
 		for(int i = 0; i<e; i++){
 			if(edifice[0][i].getNameEmployee().equals(name)){
-				ext = edifice[0][i].getExtension();
+				ext += edifice[0][i].getExtension();
 			}
 		}
 		for(int r = 0; r<d; r++){
 			if(edifice[r][e].getNameEmployee().equals(name)){
-				ext =edifice[r][e].getExtension();		
+				ext +=edifice[r][e].getExtension();		
 			}
 		}
 		for(int y = e; y < 0; y--){
 			if(edifice[d][y].getNameEmployee().equals(name)){
-				ext = edifice[d][y].getExtension();		
+				ext += edifice[d][y].getExtension();		
 			}
 		}
 		for(int j = d; j< 0 ; j--){
 			if(edifice[j][0].getNameEmployee().equals(name)){
-				ext = edifice[j][0].getExtension();	
+				ext += edifice[j][0].getExtension();	
 			}
 		}
 		return ext;
 	}	
 	
 	public String SearchExtensionE(String name){
-		if(FILAS == COlUMNAS){
+		String ext = "";
+		if(filas == COLUMNAS){
 			
 			
 		}
 		
-		
+		return ext;
 	}	
 }

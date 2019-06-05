@@ -25,7 +25,7 @@ public class Main{
 		int option = 0;
 		while(option =! 4){
 			System.out.println("ingrese el numeor de la opcion que desea realizar");
-			System.out.println("1. 
+			System.out.println("1. registrar un 
 			System.out.println("2. 
 			System.out.println("3. buscar extencion de un trabajador");
 			System.out.println("4. ver los correos electronicos de los trabajadores de un cargo");
