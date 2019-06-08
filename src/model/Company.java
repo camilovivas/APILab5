@@ -1,7 +1,13 @@
+/**
+*Universidad Icesi (Cali-Colombia)
+*laboratorio 5 y 6 APO I
+*@autor: Camilo Vivas <camilo-152000@hotmail.com>
+*Date: 09/06/2019
+*/
 package model;
 import java.util.*;
 
-public class Company extends LegalPersonality{
+public  abstract class Company extends LegalPersonality{
 	// CONSTANTES
 	public static final int FARMING_HUNTING_FORESTRY_FISHING = 1;
 	public static final int MINING_QUARRIES = 2;
@@ -17,8 +23,8 @@ public class Company extends LegalPersonality{
 	private int type;
 
 	
-	public Company(String nit, String address, String phone, int employees, double assets, int day, int month, int year, String nameLR, int type, String nameRegistry){
-		super(nit, address, phone, employees, assets, day, month, year, nameLR);
+	public Company(String nit, String address, String phone, int employees, double assets, String date, String nameLR, int type, String nameRegistry){
+		super(nit, address, phone, employees, assets, date, nameLR);
 		this.type = type;
 		this.nameRegistry = nameRegistry;
 		

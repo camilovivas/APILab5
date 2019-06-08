@@ -1,3 +1,9 @@
+/**
+*Universidad Icesi (Cali-Colombia)
+*laboratorio 5 y 6 APO I
+*@autor: Camilo Vivas <camilo-152000@hotmail.com>
+*Date: 09/06/2019
+*/
 package model;
 
 public class FoodManufacturing extends  ManufacturingCompany{
@@ -9,8 +15,8 @@ public class FoodManufacturing extends  ManufacturingCompany{
 	private char conservation;
 	
 
-	public FoodManufacturing(String nit, String address, String phone, int employees, double assets, int day, int month, int year, String nameLR, int type, String nameRegistry){
-		super(nit, address, phone, employees, assets, day, month, year, nameLR, type, nameRegistry);
+	public FoodManufacturing(String nit, String address, String phone, int employees, double assets, String date, String nameLR, int type, String nameRegistry){
+		super(nit, address, phone, employees, assets, date, nameLR, type, nameRegistry);
 		
 		
 	}

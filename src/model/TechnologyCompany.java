@@ -1,3 +1,9 @@
+/**
+*Universidad Icesi (Cali-Colombia)
+*laboratorio 5 y 6 APO I
+*@autor: Camilo Vivas <camilo-152000@hotmail.com>
+*Date: 09/06/2019
+*/
 package model;
 import java.util.*;
 
@@ -13,8 +19,8 @@ public class TechnologyCompany extends ServicesCompany implements ConsumptionXTr
 	private ArrayList<Character> services;
 	private double energy;
 	
-	public TechnologyCompany(String nit, String address, String phone, int employees, double assets, int day, int month, int year, String nameLR, int type, String nameRegistry, double energy){
-		super(nit, address, phone, employees, assets, day, month, year, nameLR, type, nameRegistry);
+	public TechnologyCompany(String nit, String address, String phone, int employees, double assets, String date, String nameLR, int type, String nameRegistry, double energy){
+		super(nit, address, phone, employees, assets, date, nameLR, type, nameRegistry);
 		services = new ArrayList<Character>();
 		this.energy = energy;
 	}

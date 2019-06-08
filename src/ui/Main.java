@@ -25,8 +25,8 @@ public class Main{
 		int option = 0;
 		while(option =! 4){
 			System.out.println("ingrese el numeor de la opcion que desea realizar");
-			System.out.println("1. registrar un 
-			System.out.println("2. 
+			System.out.println("1. registrar una empresa");
+			System.out.println("2. ver todas las empresas");
 			System.out.println("3. buscar extencion de un trabajador");
 			System.out.println("4. ver los correos electronicos de los trabajadores de un cargo");
 			
@@ -53,6 +53,18 @@ public class Main{
 			System.out.println("4.busqueda en O");
 			System.out.println("5.busqueda en E");
 			int method = reader.nextInt();
+			switch(method){
+				case 1:
+				
+				case 2:
+				
+				case 3:
+				
+				case 4:
+				
+				case 5:
+				
+			}
 		
 			case :
 

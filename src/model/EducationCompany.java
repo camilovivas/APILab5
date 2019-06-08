@@ -1,3 +1,9 @@
+/**
+*Universidad Icesi (Cali-Colombia)
+*laboratorio 5 y 6 APO I
+*@autor: Camilo Vivas <camilo-152000@hotmail.com>
+*Date: 09/06/2019
+*/
 package model;
 
 public class EducationCompany extends ServicesCompany implements Procultura{
@@ -13,8 +19,8 @@ public class EducationCompany extends ServicesCompany implements Procultura{
 	private int studentsStratum1and2;
 	private int studentsActive;
 
-	public EducationCompany(String nit, String address, String phone, int employees, double assets, int day, int month, int year, String nameLR, int type, String nameRegistry){
-		super(nit, address, phone, employees, assets, day, month, year, nameLR, type, nameRegistry);
+	public EducationCompany(String nit, String address, String phone, int employees, double assets, String date, String nameLR, int type, String nameRegistry){
+		super(nit, address, phone, employees, assets, date, nameLR, type, nameRegistry);
 
 	}
 

@@ -1,3 +1,9 @@
+/**
+*Universidad Icesi (Cali-Colombia)
+*laboratorio 5 y 6 APO I
+*@autor: Camilo Vivas <camilo-152000@hotmail.com>
+*Date: 09/06/2019
+*/
 package model;
 import java.util.*;
 
@@ -6,8 +12,8 @@ public class Holding extends LegalPersonality{
 	private Cubicle [][] edifice;
 	private int filas;
 	
-	public Holding(String nit, String address, String phone, int employees, double assets, int day, int month, int year, String nameLR, int filas){
-		super(nit, address, phone, employees, assets, day, month, year, nameLR);
+	public Holding(String nit, String address, String phone, int employees, double assets, String date, String nameLR, int filas){
+		super(nit, address, phone, employees, assets, date, nameLR);
 		this.filas = filas;
 		edifice = new Cubicle [filas][COLUMNAS];
 	}

@@ -1,3 +1,9 @@
+/**
+*Universidad Icesi (Cali-Colombia)
+*laboratorio 5 y 6 APO I
+*@autor: Camilo Vivas <camilo-152000@hotmail.com>
+*Date: 09/06/2019
+*/
 package model;
 
 public class MedicinesManufacturing extends ManufacturingCompany implements ConsumptionXTree{
@@ -14,8 +20,8 @@ public class MedicinesManufacturing extends ManufacturingCompany implements Cons
 	private String expiring;
 	private char modality;
 	
-	public MedicinesManufacturing(String nit, String address, String phone, int employees, double assets, int day, int month, int year, String nameLR, int type, String nameRegistry, String registrySanitarian, int statusRegistry, String expiring, char modality){
-		super(nit, address, phone, employees, assets, day, month, year, nameLR, type, nameRegistry);
+	public MedicinesManufacturing(String nit, String address, String phone, int employees, double assets, String date, String nameLR, int type, String nameRegistry, String registrySanitarian, int statusRegistry, String expiring, char modality){
+		super(nit, address, phone, employees, assets, date, nameLR, type, nameRegistry);
 		this.registrySanitarian = registrySanitarian;
 		this.statusRegistry = statusRegistry;
 		this.expiring = expiring;
