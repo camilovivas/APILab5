@@ -91,7 +91,7 @@ public class Holding extends LegalPersonality{
 		return msj;
 	}
 	
-	public String SearchExtensionL(String name){
+	public String searchExtensionL(String name){
 		String ext = "";
 		boolean found = false;
 		int a = edifice[0].length;
@@ -112,7 +112,7 @@ public class Holding extends LegalPersonality{
 		return ext;
 	}
 	
-	public String SearchExtensioZ(String name){
+	public String searchExtensioZ(String name){
 		String ext= "";
 		boolean found = false;
 		int  r = edifice.length;
@@ -147,30 +147,36 @@ public class Holding extends LegalPersonality{
 		return ext;
 	}
 	
-	public String SearchExtensionX(String name){
+	public String searchExtensionX(String name){
 		String ext = "";
 		int b = edifice[0].length;
 		int c =  edifice.length;
 		// diagonal de paa atras
-		for(int i = 0; i<c++; i++){
-			for(int j = b; j<0; j--){
-				if(edifice[i][j].getNameEmployee().equals(name)){
-					ext += edifice[i][j].getExtension();
+		if(filas == COLUMNAS){
+			for(int i = 0; i<c++; i++){
+				for(int j = b; j<0; j--){
+					if(edifice[i][j].getNameEmployee().equals(name)){
+						ext += edifice[i][j].getExtension();
+					}
+				}
+			}
+		
+			// diagonal hacia adelante
+			for(int k = 0; k<c++; k++){
+				for(int h = 0; h<b; h++){
+					if(edifice[k][h].getNameEmployee().equals(name)){
+						ext += edifice[k][h].getExtension();
+					}
 				}
 			}
 		}
-		// diagonal hacia adelante
-		for(int k = 0; k<c++; k++){
-			for(int h = 0; h<b; h++){
-				if(edifice[k][h].getNameEmployee().equals(name)){
-					ext += edifice[k][h].getExtension();
-				}
-			}
+		else{
+			ext = "no se puede realizar este metodo de busqueda";
 		}
 		return ext;
 	}
 	// con el encontrado diferente ya no entra a los demas ciclos?
-	public String SearchExtensionO(String name){
+	public String searchExtensionO(String name){
 		String ext = "";
 		int e =edifice[0].length;
 		int d = edifice.length;
@@ -197,13 +203,57 @@ public class Holding extends LegalPersonality{
 		return ext;
 	}	
 	
-	public String SearchExtensionE(String name){
+	public String searchExtensionE(String name){
 		String ext = "";
-		if(filas == COLUMNAS){
-			
-			
+		boolean change = false;
+		boolean found = false;
+		int h = edifice.length;
+		int f = edifice[0].length;
+		int fila = 0;
+		
+		if(%filas != 0){
+			while(fila == filas){
+				if(change == false){
+					for(int i = 0; i<f && !found; i++){
+						if(edifice[fila][i].getNameEmployee().equals(name){
+							ext += edifice[fila][i].getExtension();
+							found = true;
+						}
+						else{
+							if(i == f){
+								change = true;
+								fila++:
+							}
+						}
+					}	
+				}
+				else{
+					for(int j = f; j>0 && !found; j--){
+						if(edifice[fila][j].getNameEmployee().equals(name){
+							ext = edifice[fila][j].getExtension();
+							found = true;
+						}
+						else{
+							if(j == 0){
+								change = true;
+								fila++:
+							}
+						}
+					}	
+				}
+			}
+		}
+		else{
+			ext += "no se puede realizar este metodo de busqueda";
 		}
 		
 		return ext;
 	}	
+	
+	public void addEmployee(String nameEmployee, String position, String email){
+		String extencion = " ";
+		// que se ponga ma misma extencion que tiene el cubiculo
+		 Cubicle(nameEmployee, position, email, extencion);
+		
+	}
 }

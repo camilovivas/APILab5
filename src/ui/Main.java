@@ -1,3 +1,4 @@
+		}
 /**
 *Universidad Icesi (Cali-Colombia)
 *laboratorio 5 y 6 APO I
@@ -29,21 +30,18 @@ public class Main{
 			System.out.println("2. ver todas las empresas");
 			System.out.println("3. buscar extencion de un trabajador");
 			System.out.println("4. ver los correos electronicos de los trabajadores de un cargo");
-			
-			
+			System.out.println("5. agregar un nuevo trabajador");
 			
 			option = reader,nextInt();
 			switch(option){
-			case :
+			case 1:
 		
 		
-			case :
+			case 2:
 		
 		
-			case :
 		
-		
-			case :
+			case 3:
 			System.out.println("ingrse el nombre del trabajador");
 			String name = reader.next();
 			System.out.println("ingrese numero del metodo por el cual desea realizar la busqueda");
@@ -55,20 +53,33 @@ public class Main{
 			int method = reader.nextInt();
 			switch(method){
 				case 1:
-				
+				relacion.searchExtensionL(name)
 				case 2:
-				
+				relacion.searchExtensionZ(name)
 				case 3:
-				
+				relacion.searchExtensionX(name)
 				case 4:
-				
+				relacion.searchExtensionO(name)
 				case 5:
-				
+				relacion.searchExtensionE(name)
 			}
 		
-			case :
-
-		}
+			case 4:
+			System.out.println("ingrese el cargo");
+			String position = reader.next();
+			
+			System.out.println(relacion.spiral(position));
+			System.out.println("
+			
+			case 5:
+			System.out.println("ingrese el nombre del empleado");
+			String employee = reader.next();			
+			System.out.println("ingrese el cargo a ocupar");
+			String position = reader.next();			
+			System.out.println("ingrese el correo electronico");
+			String email = reader.next();			
+			relacion.addEmployee(employee, position, email);
+			
 	
 	}
 	public void init()[
