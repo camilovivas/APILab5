@@ -6,12 +6,23 @@
 */
 package model;
 import java.util.*;
-
+/**
+*Description this class is of Holding
+*/
 public class Holding extends LegalPersonality{
 	public static final int COLUMNAS = 20;
 	private Cubicle [][] edifice;
 	private int filas;
-	
+	/*
+	*Description this is the build of class 
+	*@param nit
+	*@param address the address from LegalPersonality
+	*@param phone the phone from LegalPersonality
+	*@param employees the quantity of employees
+	*@param assets the assets from company
+	*@param date the date
+	*@param nameLR the name of LegalPersonality
+	*/
 	public Holding(String nit, String address, String phone, int employees, double assets, String date, String nameLR, int filas){
 		super(nit, address, phone, employees, assets, date, nameLR);
 		this.filas = filas;
@@ -24,7 +35,10 @@ public class Holding extends LegalPersonality{
 	public void setFilas(int filas){
 		this.filas = filas;
 	}
-	
+	/**
+	*Description this method search the email from employees of a position
+	*@return all emails
+	*/
 	public String spiral(String position){
 		String msj=" ";
 		int avanceColumnas = 0;
@@ -211,32 +225,32 @@ public class Holding extends LegalPersonality{
 		int f = edifice[0].length;
 		int fila = 0;
 		
-		if(%filas != 0){
+		if(filas%2 != 0){
 			while(fila == filas){
 				if(change == false){
 					for(int i = 0; i<f && !found; i++){
-						if(edifice[fila][i].getNameEmployee().equals(name){
+						if(edifice[fila][i].getNameEmployee().equals(name)){
 							ext += edifice[fila][i].getExtension();
 							found = true;
 						}
 						else{
 							if(i == f){
 								change = true;
-								fila++:
+								fila++;
 							}
 						}
 					}	
 				}
 				else{
 					for(int j = f; j>0 && !found; j--){
-						if(edifice[fila][j].getNameEmployee().equals(name){
+						if(edifice[fila][j].getNameEmployee().equals(name)){
 							ext = edifice[fila][j].getExtension();
 							found = true;
 						}
 						else{
 							if(j == 0){
 								change = true;
-								fila++:
+								fila++;
 							}
 						}
 					}	
@@ -250,8 +264,28 @@ public class Holding extends LegalPersonality{
 		return ext;
 	}	
 	
+	
+	public void fillMatriz(){
+		int ext = 1000;
+		for(int i = 0; i<edifice.length; i++){
+			for(int j = 0; j<eidfice[0].length; j++){
+				Cubicle c = new Cubicle(" "," "," ", ext+j);
+				edifice[i][j] = c;
+				ext += i*1000;
+			}
+		}
+		
+	}
+	
 	public void addEmployee(String nameEmployee, String position, String email){
 		String extencion = " ";
+		for(int i = 0; i<edifice.length; i++){
+			for(int j = 0; j<eidfice[0].length; j++){
+				if(edifice[i][j].getNameEmployee()==
+				
+			}
+			
+		}
 		// que se ponga ma misma extencion que tiene el cubiculo
 		 Cubicle(nameEmployee, position, email, extencion);
 		

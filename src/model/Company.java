@@ -6,6 +6,9 @@
 */
 package model;
 import java.util.*;
+/**
+*Descriptioon this is the class of Company
+*/
 
 public  abstract class Company extends LegalPersonality{
 	// CONSTANTES
@@ -22,7 +25,18 @@ public  abstract class Company extends LegalPersonality{
 	private String nameRegistry;
 	private int type;
 
-	
+	/*
+	*Description this is the build of class 
+	*@param nit
+	*@param address the address from LegalPersonality
+	*@param phone the phone from LegalPersonality
+	*@param employees the quantity of employees
+	*@param assets the assets from company
+	*@param date the date
+	*@param nameLR the name of LegalPersonality
+	*@param nameRegistry the nameRegistry
+	*@param type the type of compnay
+	*/
 	public Company(String nit, String address, String phone, int employees, double assets, String date, String nameLR, int type, String nameRegistry){
 		super(nit, address, phone, employees, assets, date, nameLR);
 		this.type = type;

@@ -5,7 +5,9 @@
 *Date: 09/06/2019
 */
 package model;
-
+/**
+*Description this class is of LegalPersonality
+*/
 public  abstract class LegalPersonality{
 	
 	private String nit;
@@ -15,7 +17,16 @@ public  abstract class LegalPersonality{
 	private double assets;
 	private String date;
 	private String nameLR;
-	
+	/*
+	*Description this is the build of class 
+	*@param nit
+	*@param address the address from LegalPersonality
+	*@param phone the phone from LegalPersonality
+	*@param employees the quantity of employees
+	*@param assets the assets from company
+	*@param date the date
+	*@param nameLR the name of LegalPersonality
+	*/
 	public LegalPersonality(String nit, String address, String phone, int employees, double assets, String date, String nameLR){
 		
 		this.nit = nit;

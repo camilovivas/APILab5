@@ -5,6 +5,9 @@
 *Date: 09/06/2019
 */
 package model;
+/**
+*Description this class is of EducationCompany
+*/
 
 public class EducationCompany extends ServicesCompany implements Procultura{
 	public final static char UNIVERSITY = 'u';
@@ -18,15 +21,24 @@ public class EducationCompany extends ServicesCompany implements Procultura{
 	private char educationSector;
 	private int studentsStratum1and2;
 	private int studentsActive;
-
+	/*
+	*Description this is the build of class EducationCompany
+	*@param nit 
+	*@param address the address from LegalPersonality
+	*@param phone the phone from LegalPersonality
+	*@param employees the quantity of employees
+	*@param assets the assets from company
+	*@param date the date
+	*@param nameLR the name of LegalPersonality
+	*/
 	public EducationCompany(String nit, String address, String phone, int employees, double assets, String date, String nameLR, int type, String nameRegistry){
 		super(nit, address, phone, employees, assets, date, nameLR, type, nameRegistry);
 
 	}
 
 	/**
-	*
-	*
+	*Description this methos calculate the percent of procultura
+	*@return percent of procultura
 	*/
 	public String percentProcultura(){
 		
@@ -45,4 +57,6 @@ public class EducationCompany extends ServicesCompany implements Procultura{
 	public String percentProcultura2(){
 		return " ";
 	}
+	
+	super.levelSatisfaction();
 }

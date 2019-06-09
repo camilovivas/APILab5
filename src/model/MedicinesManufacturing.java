@@ -20,6 +20,20 @@ public class MedicinesManufacturing extends ManufacturingCompany implements Cons
 	private String expiring;
 	private char modality;
 	
+	/*
+	*Description this is the build of class 
+	*@param nit
+	*@param address the address from LegalPersonality
+	*@param phone the phone from LegalPersonality
+	*@param employees the quantity of employees
+	*@param assets the assets from company
+	*@param date the date
+	*@param nameLR the name of LegalPersonality
+	*@param registrySanitarian the Regulatory information given by the invima
+	*@param statusRegistry the Regulatory information given by the invima
+	*@param expiring the Regulatory information given by the invima
+	*@param modality the Regulatory information given by the invima
+	*/
 	public MedicinesManufacturing(String nit, String address, String phone, int employees, double assets, String date, String nameLR, int type, String nameRegistry, String registrySanitarian, int statusRegistry, String expiring, char modality){
 		super(nit, address, phone, employees, assets, date, nameLR, type, nameRegistry);
 		this.registrySanitarian = registrySanitarian;
@@ -29,6 +43,10 @@ public class MedicinesManufacturing extends ManufacturingCompany implements Cons
 		
 	}
 	// METHODS
+	/**
+	*Description this method calculate the quantity of tree to plant
+	*@return the quantity of tree to plant
+	*/
 	public int waterXtree(){
 		double ltrs = 0;
 		int tree = 0;

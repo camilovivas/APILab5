@@ -11,8 +11,14 @@ public class Cubicle{
 	private String nameEmployee;
 	private String position;
 	private String email;
-	private String extension;
-	
+	private int extension;
+	/**
+	*Descripion this is the build of class Cubicle 
+	*@param nameEmployee the name of employee
+	*@param position the position of employee
+	*@param email the email of employe
+	*@param extension the extencion of Cubicle
+	*/
 	public Cubicle(String nameEmployee, String position, String email, String extension){
 		this.nameEmployee = nameEmployee;
 		this.position = position;
