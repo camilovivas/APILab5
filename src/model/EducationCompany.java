@@ -58,5 +58,7 @@ public class EducationCompany extends ServicesCompany implements Procultura{
 		return " ";
 	}
 	
-	super.levelSatisfaction();
+	public void levelSatisfaction(){
+		super.levelSatisfaction();
+	}
 }

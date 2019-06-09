@@ -56,5 +56,8 @@ public class TechnologyCompany extends ServicesCompany implements ConsumptionXTr
 		return 0;
 	}
 	
-	super.levelSatisfaction();
+	public void levelSatisfaction(){
+		super.levelSatisfaction();
+	}
+	
 }

@@ -5,7 +5,9 @@
 *Date: 09/06/2019
 */
 package model;
-
+/**
+*Description this class is of MedicinesManufacturing
+*/
 public class MedicinesManufacturing extends ManufacturingCompany implements ConsumptionXTree{
 	// CONSTANTES
 	public static final int VALID = 1;

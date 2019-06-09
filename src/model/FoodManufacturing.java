@@ -5,7 +5,9 @@
 *Date: 09/06/2019
 */
 package model;
-
+/**
+*Description this class is of FoodManufacturing
+*/
 public class FoodManufacturing extends  ManufacturingCompany{
 	public static char ROOM_TEMPERATURE = 'T';
 	public static char REFRIGERATION = 'R';

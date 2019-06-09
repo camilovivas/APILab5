@@ -5,14 +5,22 @@
 *Date: 09/06/2019
 */
 package model;
-
+/**
+*Description this classs is of Product
+*/
 public class Product{
 	
 	private String name;
 	private String code;
 	private double water;
 	private int units;
-	
+	/**
+	*Description this is the buils of class Product
+	*@param name the name of product
+	*@param code the code of Product
+	*@param water the water used to do the producc
+	*@param units quantity of units
+	*/
 	public Product(String name, String code, double water, int units){
 		this.name = name;
 		this.code = code;

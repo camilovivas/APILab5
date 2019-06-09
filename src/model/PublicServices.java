@@ -58,8 +58,8 @@ public class PublicServices extends ServicesCompany implements Procultura{
 	public String percentProcultura(){
 		return " ";
 	}
-	
-	super.levelSatisfaction();
-
+	public void levelSatisfaction(){
+		super.levelSatisfaction();
+	}
 	
 }
