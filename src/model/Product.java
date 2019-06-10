@@ -26,8 +26,6 @@ public class Product{
 		this.code = code;
 		this.water = water;
 		this.units = units;
-		
-		
 	}
 	
 	public String getName(){

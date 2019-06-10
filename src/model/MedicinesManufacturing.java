@@ -31,6 +31,8 @@ public class MedicinesManufacturing extends ManufacturingCompany implements Cons
 	*@param assets the assets from company
 	*@param date the date
 	*@param nameLR the name of LegalPersonality
+	*@param nameRegistry the nameRegistry
+	*@param type the type of compnay
 	*@param registrySanitarian the Regulatory information given by the invima
 	*@param statusRegistry the Regulatory information given by the invima
 	*@param expiring the Regulatory information given by the invima
@@ -70,5 +72,8 @@ public class MedicinesManufacturing extends ManufacturingCompany implements Cons
 	}
 	public int energyXtree(){
 		return 0;
+	}
+	public void addProduct(Product p){
+		super.addProduct(p);
 	}
 }

@@ -10,7 +10,7 @@ import java.util.*;
 *Description this class is of ServicesCompany
 */
 public abstract class ServicesCompany extends Company{
-	private Arraylist <Poll> answers;
+	private ArrayList <Poll> answers;
 	
 	/*
 	*Description this is the build of class 
@@ -21,10 +21,12 @@ public abstract class ServicesCompany extends Company{
 	*@param assets the assets from company
 	*@param date the date
 	*@param nameLR the name of LegalPersonality
+	*@param nameRegistry the nameRegistry
+	*@param type the type of compnay
 	*/
 	public ServicesCompany(String nit, String address, String phone, int employees, double assets, String date, String nameLR, int type, String nameRegistry){
 		super(nit, address, phone, employees, assets, date, nameLR, type, nameRegistry);
-		answers = new ArrayList<poll>();
+		answers = new ArrayList<Poll>();
 	}
 	
 	public ArrayList<Poll> getAnswers(){
@@ -47,5 +49,13 @@ public abstract class ServicesCompany extends Company{
 		double g = prom/3;
 		String t = "el nivel de sarisfaccion es"+g;
 		return t;
+	}
+	/**
+	*Description this method add polls
+	*@param c poll to add
+	*post: has been add the pool
+	*/
+	public void AddPoll(Poll c){
+		answers.add(c);
 	}
 }

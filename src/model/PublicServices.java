@@ -27,9 +27,11 @@ public class PublicServices extends ServicesCompany implements Procultura{
 	*@param assets the assets from company
 	*@param date the date
 	*@param nameLR the name of LegalPersonality
+	*@param nameRegistry the nameRegistry
+	*@param type the type of compnay
 	*@param typeServices the type of service taken
 	*@param subscribersthe quantity of subscribers
-	*@param subscribersStratum1and2
+	*@param subscribersStratum1and2 quantity of subscribers stratum 1 and 2
 	*/
 	public PublicServices(String nit, String address, String phone, int employees, double assets, String date, String nameLR, int type, String nameRegistry, char typeServices, int subscribers, int subscribersStratum1and2){
 		super(nit, address, phone, employees, assets, date, nameLR, type, nameRegistry);
@@ -58,8 +60,11 @@ public class PublicServices extends ServicesCompany implements Procultura{
 	public String percentProcultura(){
 		return " ";
 	}
-	public void levelSatisfaction(){
+	public String levelSatisfaction(){
 		super.levelSatisfaction();
+	}
+	public void AddPoll(Pool c){
+		super.AddPoll(c);
 	}
 	
 }

@@ -5,6 +5,9 @@
 *Date: 09/06/2019
 */
 package model;
+/**
+*Description this is the class of Cubicle 
+*/
 
 public class Cubicle{
 	
@@ -19,12 +22,11 @@ public class Cubicle{
 	*@param email the email of employe
 	*@param extension the extencion of Cubicle
 	*/
-	public Cubicle(String nameEmployee, String position, String email, String extension){
+	public Cubicle(String nameEmployee, String position, String email, int extension){
 		this.nameEmployee = nameEmployee;
 		this.position = position;
 		this.email = email;
-		this.extension = extension; 
-		
+		this.extension = extension;
 	}
 	
 	public String getNameEmployee(){
@@ -48,11 +50,12 @@ public class Cubicle{
 		this.email = email;
 	}
 	
-	public String getExtension(){
+	public int getExtension(){
 		return extension;
 	}
-	public void setExtension(String extension){
+	public void setExtension(int extension){
 		this.extension = extension; 
 	}
 	
+
 }

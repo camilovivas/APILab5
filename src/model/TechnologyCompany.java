@@ -29,6 +29,9 @@ public class TechnologyCompany extends ServicesCompany implements ConsumptionXTr
 	*@param assets the assets from company
 	*@param date the date
 	*@param nameLR the name of LegalPersonality
+	*@param type 
+	*@param nameRegistry
+	*@param energy the energy used
 	*/
 	public TechnologyCompany(String nit, String address, String phone, int employees, double assets, String date, String nameLR, int type, String nameRegistry, double energy){
 		super(nit, address, phone, employees, assets, date, nameLR, type, nameRegistry);
@@ -56,7 +59,7 @@ public class TechnologyCompany extends ServicesCompany implements ConsumptionXTr
 		return 0;
 	}
 	
-	public void levelSatisfaction(){
+	public String levelSatisfaction(){
 		super.levelSatisfaction();
 	}
 	

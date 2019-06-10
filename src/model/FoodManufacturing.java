@@ -36,4 +36,8 @@ public class FoodManufacturing extends  ManufacturingCompany{
 		this.conservation = conservation;
 	}
 	
+	public void addProduct(Product p){
+		super.addProduct(p);
+	}
+	
 }

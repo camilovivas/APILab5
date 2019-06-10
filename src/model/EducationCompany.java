@@ -30,9 +30,27 @@ public class EducationCompany extends ServicesCompany implements Procultura{
 	*@param assets the assets from company
 	*@param date the date
 	*@param nameLR the name of LegalPersonality
+	*@param nameRegistry the nameRegistry
+	*@param type the type of compnay
+	*@param regitryNumber the nummer of registry 
+	*@param yearsAccreditation the years of acreditation
+	*@param positionSaber11 the position Saber 11
+	*@param positionSaberPro the position saber pro
+	*@param rectorName the rector name
+	*@param educationSector type of education company
+	*@param studentsStratum1and2 quantity of students stratum 1 and 2
+	*@param studentsActive quantity of students
 	*/
-	public EducationCompany(String nit, String address, String phone, int employees, double assets, String date, String nameLR, int type, String nameRegistry){
+	public EducationCompany(String nit, String address, String phone, int employees, double assets, String date, String nameLR, int type, String nameRegistry, String regitryNumber, String yearsAccreditation, String positionSaber11, String positionSaberPro, String rectorName, char educationSector, int studentsStratum1and2, int studentsActive){
 		super(nit, address, phone, employees, assets, date, nameLR, type, nameRegistry);
+		this.regitryNumber = regitryNumber;
+		this.yearsAccreditation = yearsAccreditation;
+		this.positionSaber11 = positionSaber11;
+		this.positionSaberPro = positionSaberPro;
+		this.rectorName = rectorName;
+		this.educationSector = educationSector;
+		this.studentsStratum1and2 = studentsStratum1and2;
+		this.studentsActive = studentsActive;
 
 	}
 
@@ -58,7 +76,7 @@ public class EducationCompany extends ServicesCompany implements Procultura{
 		return " ";
 	}
 	
-	public void levelSatisfaction(){
+	public String levelSatisfaction(){
 		super.levelSatisfaction();
 	}
 }

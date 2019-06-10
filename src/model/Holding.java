@@ -37,6 +37,7 @@ public class Holding extends LegalPersonality{
 	}
 	/**
 	*Description this method search the email from employees of a position
+	*@param position the position of employee
 	*@return all emails
 	*/
 	public String spiral(String position){
@@ -104,7 +105,11 @@ public class Holding extends LegalPersonality{
 		}
 		return msj;
 	}
-	
+	/**
+	*Description this method search in L the extension from a employee 
+	*@param name name of employee to find
+	*@return the extension
+	*/
 	public String searchExtensionL(String name){
 		String ext = "";
 		boolean found = false;
@@ -125,7 +130,11 @@ public class Holding extends LegalPersonality{
 		}
 		return ext;
 	}
-	
+	/**
+	*Description this method search in Z the extension from a employee 
+	*@param name name of employee to find
+	*@return the extension
+	*/
 	public String searchExtensioZ(String name){
 		String ext= "";
 		boolean found = false;
@@ -160,7 +169,11 @@ public class Holding extends LegalPersonality{
 		}
 		return ext;
 	}
-	
+	/**
+	*Description this method search in X the extension from a employee
+	*@param name name of employee to find	
+	*@return the extension
+	*/
 	public String searchExtensionX(String name){
 		String ext = "";
 		int b = edifice[0].length;
@@ -189,7 +202,11 @@ public class Holding extends LegalPersonality{
 		}
 		return ext;
 	}
-	// con el encontrado diferente ya no entra a los demas ciclos?
+	/**
+	*Description this method search in O the extension from a employee 
+	*@param name name of employee to find
+	*@return the extension
+	*/
 	public String searchExtensionO(String name){
 		String ext = "";
 		int e =edifice[0].length;
@@ -216,7 +233,11 @@ public class Holding extends LegalPersonality{
 		}
 		return ext;
 	}	
-	
+	/**
+	*Description this method search in E the extension from a employee 
+	*@param name name of employee to find
+	*@return the extension
+	*/
 	public String searchExtensionE(String name){
 		String ext = "";
 		boolean change = false;
@@ -244,7 +265,7 @@ public class Holding extends LegalPersonality{
 				else{
 					for(int j = f; j>0 && !found; j--){
 						if(edifice[fila][j].getNameEmployee().equals(name)){
-							ext = edifice[fila][j].getExtension();
+							ext += edifice[fila][j].getExtension();
 							found = true;
 						}
 						else{
@@ -264,11 +285,14 @@ public class Holding extends LegalPersonality{
 		return ext;
 	}	
 	
-	
+	/**
+	*Description this method add the extencion to all Cubicles
+	*post: has been add the extension to all Cubicles
+	*/
 	public void fillMatriz(){
 		int ext = 1000;
 		for(int i = 0; i<edifice.length; i++){
-			for(int j = 0; j<eidfice[0].length; j++){
+			for(int j = 0; j<edifice[0].length; j++){
 				Cubicle c = new Cubicle(" "," "," ", ext+j);
 				edifice[i][j] = c;
 				ext += i*1000;
@@ -276,18 +300,24 @@ public class Holding extends LegalPersonality{
 		}
 		
 	}
-	
+	/**
+	*Description this methos add the new employees to the firsh cubicle empty from edifice
+	*@param nameEmployee the name of employee
+	*@param position the position of employee
+	*@param email the email of employee
+	*post: has been add the employee 
+	*/
 	public void addEmployee(String nameEmployee, String position, String email){
-		String extencion = " ";
+		int extencion = 0;
+		 
 		for(int i = 0; i<edifice.length; i++){
-			for(int j = 0; j<eidfice[0].length; j++){
-				if(edifice[i][j].getNameEmployee()==
-				
-			}
-			
-		}
-		// que se ponga ma misma extencion que tiene el cubiculo
-		 Cubicle(nameEmployee, position, email, extencion);
-		
+			for(int j = 0; j<edifice[0].length; j++){
+				if(edifice[i][j].getNameEmployee()== " "){
+					extencion = edifice[i][j].getExtension();
+					Cubicle n = new Cubicle(nameEmployee, position, email, extencion);
+					edifice[i][j] = n;
+				}	
+			}	
+		}	
 	}
 }
